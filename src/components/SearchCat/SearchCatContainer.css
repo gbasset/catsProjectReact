@@ -1,0 +1,93 @@
+.form {
+    padding: 30px 30px;
+    background-color: rgb(151, 143, 143);
+    color: rgb(230, 230, 230);
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    text-align: center;
+    width: 50%;
+    height: auto;
+    border-radius: 3%;
+}
+
+.form-control {
+    margin-bottom: 10px;
+    padding-top: 20px;
+    position: relative;
+}
+
+.form-control label {
+    color: rgb(255, 255, 255);
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.form-control input:focus {
+    outline: 0;
+    border-color: rgb(90, 209, 11);
+}
+
+.type {
+    width: 120px;
+    text-align: center;
+}
+
+.btn-normal {
+    width: 100px;
+    height: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.125;
+    border-radius: 14px;
+    padding: 2px 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: auto;
+}
+
+.btn-normal:hover {
+    text-decoration: none;
+    color: black;
+    font-family: 'IBM_Plex_Sans_Semi_Bold';
+    font-size: 16px;
+    font-weight: bold;
+    transition: linear 3ms;
+    background-color: #ffffffca;
+    box-shadow: 0px 2px 15px rgba(172, 172, 172, 0.94);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.listCats {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0%;
+    height: 200px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.cat {
+    width: 100px;
+    margin: 5px 5px;
+}
+
+.cat:hover {
+    cursor: pointer;
+    color: black;
+}

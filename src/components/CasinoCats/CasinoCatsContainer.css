@@ -1,0 +1,65 @@
+.containAll {
+    display: block;
+    flex-direction: column;
+}
+
+.containerCatsImages {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.catImage {
+    width: 300px;
+    height: 410px;
+    border: 1px solid blueviolet;
+}
+
+.btn-casino {
+    width: 100px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: rgb(250, 245, 245)er;
+    background: rgb(231, 15, 15);
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.125;
+    border-radius: 14px;
+    padding: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 35px auto;
+}
+
+.btn-casino:hover {
+    text-decoration: none;
+    color: rgb(250, 19, 19);
+    font-size: 16px;
+    font-weight: bold;
+    transition: linear 3ms;
+    background-color: #f5f5f5ca;
+    box-shadow: 0px 2px 15px rgba(172, 172, 172, 0.94);
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.catsImageCasino {
+    width: 100%;
+}
+
+.win {
+    color: chartreuse;
+}
+
+.loose {
+    color: crimson;
+}
+
+#message {
+    display: none;
+    margin: auto;
+    width: 50%;
+    height: 150px;
+}
