@@ -24,9 +24,7 @@ function App() {
           <Route exact path="/casinoCats" component={CasinoCatsContainer} />
           <Route exact path="" component={Erreur} />
         </Switch>
-        <div className="infinity">
-          {/* <InfinityScrollContainer /> */}
-        </div>
+
       </div >
 
     </Router>

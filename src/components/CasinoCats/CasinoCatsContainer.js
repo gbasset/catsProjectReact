@@ -3,51 +3,53 @@ import './CasinoCatsContainer.css'
 import test from './cats/1.jpg'
 import CatsList from './CatsList';
 import cat0 from './cats/0.png'
+import MessageAlert from './MessageAlert'
 export default function CasinoCatsContainer(props) {
-    const message = document.getElementById('message')
+    // const message = document.getElementById('message')
+
     const [click, setClick] = useState(false)
     const [number1, setNumber1] = useState(0)
     const [number2, setNumber2] = useState(1)
     const [number3, setNumber3] = useState(0)
     const [isBegin, setIsBegin] = useState('yes')
-
+    const [isWin, setIsWin] = useState(false)
+    const [isLost, setIsLost] = useState(false)
     const [off, setOff] = useState(false)
-    const max = 5
+    const max = 4
+
     const gatRandomNumbers = () => {
-        setClick(!click)
+        setClick(true)
         setIsBegin('no')
         setOff(true)
+
         setTimeout(() => {
             setOff(false)
-        }, 3000)
 
+        }, 1500)
     }
     useEffect(() => {
-        setNumber1(Math.floor(Math.random() * Math.floor(max)))
-        setNumber2(Math.floor(Math.random() * Math.floor(max)))
-        setNumber3(Math.floor(Math.random() * Math.floor(max)))
-
+        if (click === true) {
+            setClick(false)
+            setNumber1(Math.floor(Math.random() * Math.floor(max)))
+            setNumber2(Math.floor(Math.random() * Math.floor(max)))
+            setNumber3(Math.floor(Math.random() * Math.floor(max)))
+        }
+        if (number1 === number2 && number2 === number3) {
+            setIsWin(true)
+            setIsLost(false)
+        }
+        if (number1 !== number3) {
+            setIsWin(false)
+            setIsLost(true)
+        }
     }, [click])
 
-    if (number1 && number2 && number3 === number1) {
+    console.log(off);
 
-        message.style.display = 'block'
-        message.classList.add("win");
-        message.innerHTML = 'You win'
-        setTimeout(() => {
-            message.style.display = 'none'
-        }, 3000)
-    }
-    if (number1 && number2 && number3 !== number1) {
-        message.style.display = 'block'
-        message.classList.add("loose");
-        message.innerHTML = 'You Loose'
-        setTimeout(() => {
-            message.style.display = 'none'
-        }, 3000)
-    }
+
+
     return (
-        <div className="contain">
+        <div className="containCasino">
             <h1>Casino Cats</h1>
             <div className='containAll'>
 
@@ -84,41 +86,35 @@ export default function CasinoCatsContainer(props) {
                     {isBegin === 'no' &&
                         <>
 
-                            <div className="catImage"
-                                style={{
-                                    backgroundImage: `url(${CatsList[number1].url})`,
-                                    backgroundPosition: 'center',
-                                    backgroundSize: 'cover'
-                                }}
+                            <div className={!off ? 'catImage' : 'imgcatload'}
+
                             >
-                                {/* // <img className="catsImageCasino" src={CatsList[0].url} alt="cats" /> */}
+                                <img className={!off ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number1].url}`} />
                             </div>
-                            <div className="catImage" style={{
-                                backgroundImage: `url(${CatsList[number2].url})`,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover'
-                            }}></div>
-                            <div className="catImage" style={{
-                                backgroundImage: `url(${CatsList[number3].url})`,
-                                backgroundPosition: 'center',
-                                backgroundSize: 'cover'
-                            }}></div>
+                            <div className={!off ? 'catImage' : 'imgcatload'}>
+                                <img className={!off ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number2].url}`} />
+                            </div>
+                            <div className={!off ? 'catImage' : 'imgcatload'}>
+                                <img className={!off ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number3].url}`} />
+                            </div>
 
                         </>
                     }
 
                 </div>
             </div>
+
             {!off && <>
                 < div className='btn-casino' onClick={gatRandomNumbers}>TRY</div>
             </>}
 
+            {!off && isWin === true && <MessageAlert
+                msg='Vous avez gagné'
+                color='green' />}
 
-            <p id="message" className="">
-
-            </p>
-
-
+            {!off && isLost === true && <MessageAlert
+                msg='Vous avez perdu'
+                color='red' />}
 
         </div >
     )

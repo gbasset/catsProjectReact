@@ -3,6 +3,11 @@
     flex-direction: column;
 }
 
+.containCasino {
+    margin-top: 10%;
+    overflow: hidden;
+}
+
 .containerCatsImages {
     display: flex;
     flex-direction: row;
@@ -13,7 +18,66 @@
 .catImage {
     width: 300px;
     height: 410px;
-    border: 1px solid blueviolet;
+    border: 2px solid blueviolet;
+    /* transition-timing-function: cubic-bezier(1, -0.45, 0.4, 1.68);
+    /* transition: all 1s ease-in; */
+}
+
+.imgcatload {
+    width: 300px;
+    height: 410px;
+    border: 2px solid rgb(255, 160, 7);
+    background-color: rgb(251, 255, 13);
+}
+
+.imgcat {
+    width: 296px;
+    height: 406px;
+}
+
+.imgcatload:nth-child(2) {
+    width: 300px;
+    height: 410px;
+    background-color: rgb(255, 5, 5);
+}
+
+.imgcatload:nth-child(3) {
+    width: 300px;
+    height: 410px;
+    background-color: rgb(125, 245, 12);
+}
+
+@keyframes rotating {
+    from {
+        /* -ms-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+        -o-transform: rotate(0deg); */
+        transform: rotate(5520deg);
+        filter: blur(50px);
+        z-index: 0;
+    }
+    to {
+        /* -ms-transform: rotateY(-8520deg) rotateX(-8520deg);
+        -moz-transform: rotateY(-8520deg) rotateX(-8520deg);
+        -webkit-transform: rotateY(-8520deg) rotateX(-8520deg);
+        -o-transform: rotateY(-8520deg) rotateX(-8520deg); */
+        transform: rotateX(-8820deg);
+    }
+}
+
+.imgcatActive {
+    width: 100%;
+    height: 100%;
+    /* transition-duration: 0.9s; */
+    transition: all 0.1s ease-in;
+    transform: rotate(5520deg);
+    animation: rotating 0.1s linear infinite;
+    transform-style: preserve-3d;
+    filter: blur(50px);
+    z-index: 0;
+    opacity: 0.8;
+    background-size: cover;
 }
 
 .btn-casino {
