@@ -1,3 +1,37 @@
+.containTitleCasino {
+    height: 80px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 10px auto;
+}
+
+.casinoTitleYellow {
+    padding: 17px;
+    font-family: alfarn, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 63px;
+    border: 7px solid #fbff00;
+    border-radius: 30px;
+    box-shadow: 0px 2px 27px red;
+    color: red;
+}
+
+.casinoTitleRed {
+    padding: 17px;
+    font-family: alfarn, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 63px;
+    border: 7px solid red;
+    border-radius: 30px;
+    box-shadow: 0px 2px 27px #bdbe77;
+    color: #fbff00;
+    ;
+}
+
 .containAll {
     display: block;
     flex-direction: column;
@@ -13,37 +47,47 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin: 50px auto;
 }
 
-.catImage {
-    width: 300px;
-    height: 410px;
-    border: 2px solid blueviolet;
-    /* transition-timing-function: cubic-bezier(1, -0.45, 0.4, 1.68);
-    /* transition: all 1s ease-in; */
+.catImageYellow {
+    box-sizing: border-box;
+    width: 312px;
+    height: 423px;
+    border: 9px solid #fbff00;
+    border-radius: 15px;
+}
+
+.catImageRed {
+    box-sizing: border-box;
+    width: 312px;
+    height: 423px;
+    border: 9px solid red;
+    border-radius: 15px;
 }
 
 .imgcatload {
-    width: 300px;
-    height: 410px;
-    border: 2px solid rgb(255, 160, 7);
+    width: 312px;
+    height: 423px;
+    border: 9px solid rgb(255, 160, 7);
     background-color: rgb(251, 255, 13);
 }
 
 .imgcat {
     width: 296px;
     height: 406px;
+    border-radius: 5px;
 }
 
 .imgcatload:nth-child(2) {
-    width: 300px;
-    height: 410px;
+    width: 312px;
+    height: 423px;
     background-color: rgb(255, 5, 5);
 }
 
 .imgcatload:nth-child(3) {
-    width: 300px;
-    height: 410px;
+    width: 312px;
+    height: 423px;
     background-color: rgb(125, 245, 12);
 }
 
@@ -81,18 +125,19 @@
 }
 
 .btn-casino {
-    width: 100px;
-    height: 35px;
+    width: 123px;
+    height: 46px;
     display: flex;
     justify-content: center;
-    align-items: rgb(250, 245, 245)er;
     background: rgb(231, 15, 15);
     color: white;
-    font-size: 15px;
-    font-weight: bold;
+    font-family: carlmarx, sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    font-style: normal;
     line-height: 1.125;
-    border-radius: 14px;
-    padding: 8px;
+    border-radius: 30px;
+    padding: 13px;
     cursor: pointer;
     text-decoration: none;
     margin: 35px auto;
@@ -102,11 +147,15 @@
     text-decoration: none;
     color: rgb(250, 19, 19);
     font-size: 16px;
-    font-weight: bold;
+    font-family: carlmarx, sans-serif;
+    font-weight: 700;
+    font-size: 23px;
+    font-style: normal;
+    line-height: 1.125;
     transition: linear 3ms;
-    background-color: #f5f5f5ca;
-    box-shadow: 0px 2px 15px rgba(172, 172, 172, 0.94);
-    border: 2px solid rgb(0, 0, 0);
+    background-color: #fffb00;
+    box-shadow: 1px 0px 2px rgba(251, 19, 19, 0.94);
+    border: 2px solid rgb(255, 2, 2);
 }
 
 .catsImageCasino {

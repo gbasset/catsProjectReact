@@ -72,6 +72,7 @@ function InfinityScrollContainer() {
             {
                 catsWithPic.map((post, i) =>
                     <InfinityScroll
+                        key={i}
                         post={post}
                         i={i + 1}
                     />

@@ -10,7 +10,8 @@ const Message = ({ msg, color }) => {
         width: '100%',
         margin: 'auto',
         textAlign: 'center',
-        fontSize: '25px',
+        fontSize: '28px',
+        fontFamily: 'xants, sans-serif',
         color: `${color}`
     }
 

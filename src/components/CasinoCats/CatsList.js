@@ -8,7 +8,7 @@ const CatsList = [
   { id: '1', url: cat1 },
   { id: '2', url: cat2 },
   { id: '3', url: cat3 },
-  { id: '4', url: cat4 },
+  // { id: '4', url: cat4 },
   // { id: '5', url: cat5 },
 
 ]

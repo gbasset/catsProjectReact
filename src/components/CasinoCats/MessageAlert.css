@@ -2,4 +2,7 @@
     display: block;
     height: 400px;
     width: 50%;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 28px;
 }
