@@ -78,7 +78,7 @@ export default function SearchCatContainer() {
     return (
         <div className="contain">
             <form className="form" id="form">
-                <div className="form-control ">
+                <div className="form-controlS ">
                     <label htmlFor="account">Search type </label>
                     <select
                         className="form-control type "
@@ -88,6 +88,10 @@ export default function SearchCatContainer() {
                         {filterList.map(x => <option className="type" key={x.label} value={x.value}> {x.label}</option>)}
                     </select>
                 </div>
+
+            </form>
+            <div className="containSearch">
+
                 {env === "says" &&
                     <div className="form-control">
                         <label htmlFor="searchBar">Search Cat Says</label>
@@ -119,8 +123,8 @@ export default function SearchCatContainer() {
                         <ul className="listCats">
                             {categorylist.map((x, i) => <li key={i} className="cat" onClick={(e) => handleCategory(x)}> {x.name}</li>)}
                         </ul>
-                        <div>
-                            <h2>Category :  {categoryName}</h2>
+                        <h2>Category :  {categoryName}</h2>
+                        <div className="catsCategory">
                             {arrayOfCat && <div className="btn-normal" onClick={() => setIsClick(!isClick)}> Refresh</div>}
 
                             {arrayOfCat && arrayOfCat.map((x, i) =>
@@ -129,7 +133,7 @@ export default function SearchCatContainer() {
                         </div>
                     </>
                 }
-            </form>
+            </div>
         </div >
 
 
