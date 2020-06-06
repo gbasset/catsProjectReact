@@ -5,9 +5,10 @@ import CatsList from './CatsList';
 import cat0 from './cats/0.png'
 import MessageAlert from './MessageAlert'
 
-import winSound from '../../Asset/winsound.wav'
+import winSound from '../../Asset/boxdig.mp3'
 import loose from '../../Asset/chien.mp3'
 import jeton from '../../Asset/Payout.wav'
+import metroid from '../../Asset/Metroid.mp3'
 export default function CasinoCatsContainer(props) {
     // const message = document.getElementById('message')
 
@@ -18,17 +19,17 @@ export default function CasinoCatsContainer(props) {
     const [isBegin, setIsBegin] = useState('yes')
     const [isWin, setIsWin] = useState(false)
     const [loading, isLoading] = useState(false)
-    const [jetons, setJetons] = useState(5)
+    const [jetons, setJetons] = useState(15)
     const [numberOfPart, setNumberOfPart] = useState(0)
     const [classCasino, setClassCasino] = useState(false)
-    const max = 2
+    const max = 3
     // si gagner ne pas enlever le jeton
+    let chances = 3 - numberOfPart
     useEffect(() => {
         const verifyIfWin = () => {
             if (number1 === number2 && number2 === number3 && number3 === number1) {
                 setNumberOfPart(0)
                 setIsWin(true)
-
             }
             else {
                 setIsWin(false)
@@ -41,7 +42,6 @@ export default function CasinoCatsContainer(props) {
     useEffect(() => {
         if (isBegin !== 'yes') {
             const getMyRandom = () => {
-                setIsWin(false)
                 setNumber1(Math.floor(Math.random() * Math.floor(max)))
                 setNumber2(Math.floor(Math.random() * Math.floor(max)))
                 setNumber3(Math.floor(Math.random() * Math.floor(max)))
@@ -55,13 +55,19 @@ export default function CasinoCatsContainer(props) {
         setIsBegin('no')
         isLoading(true)
         setClick(!click)
-        const audio = new Audio(jeton)
-        audio.play()
+        // const audio = new Audio(jeton)
+        // audio.play()
+        const metroidS = new Audio(metroid)
+        metroidS.play()
         setTimeout(() => {
             isLoading(false)
         }, 1000)
     }
     const gatRandomNumbersRetry = () => {
+        // const audio = new Audio(jeton)
+        // audio.play()
+        const metroidS = new Audio(metroid)
+        metroidS.play()
         setNumberOfPart(0)
         setIsWin(false)
         setClick(!click)
@@ -74,37 +80,27 @@ export default function CasinoCatsContainer(props) {
     }
 
 
-    // useEffect(() => {
-    //     const counterMaj = () => {
-    //         if (click) {
-
-    //         }
-    //     }
-    //     counterMaj()
-    // }, [click])
-
     useEffect(() => {
         const counterJetons = () => {
-            if (numberOfPart === 3 && !isWin) {
+            if (isLoading && numberOfPart === 3 && !isWin) {
                 setJetons(jetons - 1)
                 setTimeout(() => {
-                    const audio = new Audio(loose)
-                    audio.play()
-                }, 2000)
-                return
+                    const looseA = new Audio(loose)
+                    looseA.play()
+                }, 150)
+
             }
-            else if (isWin) {
+            else if (isWin && numberOfPart === 0) {
                 setJetons(jetons + 1)
                 setTimeout(() => {
                     const audio2 = new Audio(winSound)
                     audio2.play()
-
-                }, 1000)
+                }, 10)
             }
-
-            return
         }
-        counterJetons()
+        setTimeout(() => {
+            counterJetons()
+        }, 1000)
     }, [numberOfPart])
 
     // setInterval(
@@ -113,11 +109,11 @@ export default function CasinoCatsContainer(props) {
     }, 1000)
     // , 1000)
 
-    console.log("isWin", isWin);
-    console.log("numberOfPart", numberOfPart);
-    console.log("jetons", jetons);
-    console.log(number1, number2, number3);
-    console.log("isLoading", loading);
+    // console.log("isWin", isWin);
+    // console.log("numberOfPart", numberOfPart);
+    // console.log("jetons", jetons);
+    // console.log(number1, number2, number3);
+    // console.log("isLoading", loading);
 
 
     return (
@@ -157,13 +153,13 @@ export default function CasinoCatsContainer(props) {
                 {isBegin === 'no' &&
                     <>
 
-                        <div className={!loading ? 'catImage' : 'imgcatload'}>
+                        <div className={!loading ? 'catImagePurple' : 'imgcatload'}>
                             <img className={!loading ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number1].url}`} />
                         </div>
-                        <div className={!loading ? 'catImage' : 'imgcatload'}>
+                        <div className={!loading ? 'catImagePurple' : 'imgcatload'}>
                             <img className={!loading ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number2].url}`} />
                         </div>
-                        <div className={!loading ? 'catImage' : 'imgcatload'}>
+                        <div className={!loading ? 'catImagePurple' : 'imgcatload'}>
                             <img className={!loading ? 'imgcat' : 'imgcatActive'} src={`${CatsList[number3].url}`} />
                         </div>
 
@@ -171,9 +167,10 @@ export default function CasinoCatsContainer(props) {
                 }
 
             </div>
-
-            {
+            {!isWin &&
                 !loading && numberOfPart < 3 && !isWin && <>
+                    {
+                        <p className="chances"> Il vous reste {chances > 0 ? `${chances} chances` : `${chances} chance`} </p>}
                     < div className='btn-casino' onClick={() => gatRandomNumbers()}>TRY</div>
                 </>
             }
