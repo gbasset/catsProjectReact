@@ -72,7 +72,7 @@
     background-color: black;
     color: #fff;
     border-radius: 4px;
-    width: 300px;
+    width: 80%;
     padding: 10px;
     font-size: 14px;
     margin: auto;
@@ -80,5 +80,26 @@
 
 .post input:focus {
     outline: 0;
+    border-color: rgb(90, 209, 11);
+}
+
+#searchBar {
+    border: 2px solid #ca82ff;
+    background-color: black;
+    color: #fff;
+    border-radius: 4px;
+    width: 80%;
+    padding: 10px;
+    font-size: 14px;
+    margin: auto;
+}
+
+#searchBar::placeholder {
+    color: #fff;
+}
+
+#searchBar:focus {
+    outline: 0;
+    color: red;
     border-color: rgb(90, 209, 11);
 }
