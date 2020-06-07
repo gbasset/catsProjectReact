@@ -66,6 +66,11 @@ export default function Header() {
                             </NavLink>
                         </li>
                         <li onClick={hideMenu} className="lienNav">
+                            <NavLink activeStyle={{ color: "#ffffff" }} className="lien" exact to="/casinoCats">
+                                Casino Cats
+                         </NavLink>
+                        </li>
+                        <li onClick={hideMenu} className="lienNav">
                             <NavLink activeStyle={{ color: "#ffffff" }} className="lien" exact to="/infinityScroll">
                                 Infinity Scroll Cats
                         </NavLink>
@@ -73,11 +78,6 @@ export default function Header() {
                         <li onClick={hideMenu} className="lienNav">
                             <NavLink activeStyle={{ color: "#ffffff" }} className="lien" exact to="/searchCat">
                                 Search My Cat
-                         </NavLink>
-                        </li>
-                        <li onClick={hideMenu} className="lienNav">
-                            <NavLink activeStyle={{ color: "#ffffff" }} className="lien" exact to="/casinoCats">
-                                Casino Cats
                          </NavLink>
                         </li>
 
