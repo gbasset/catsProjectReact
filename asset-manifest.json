@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/catsProjectReact/static/css/main.ba719981.chunk.css",
+    "main.js": "/catsProjectReact/static/js/main.9f896af9.chunk.js",
+    "main.js.map": "/catsProjectReact/static/js/main.9f896af9.chunk.js.map",
+    "runtime-main.js": "/catsProjectReact/static/js/runtime-main.6399bffb.js",
+    "runtime-main.js.map": "/catsProjectReact/static/js/runtime-main.6399bffb.js.map",
+    "static/js/2.1e84dc62.chunk.js": "/catsProjectReact/static/js/2.1e84dc62.chunk.js",
+    "static/js/2.1e84dc62.chunk.js.map": "/catsProjectReact/static/js/2.1e84dc62.chunk.js.map",
+    "index.html": "/catsProjectReact/index.html",
+    "precache-manifest.4d4633d5bd03265e9fdeaa24365ab8b3.js": "/catsProjectReact/precache-manifest.4d4633d5bd03265e9fdeaa24365ab8b3.js",
+    "service-worker.js": "/catsProjectReact/service-worker.js",
+    "static/css/main.ba719981.chunk.css.map": "/catsProjectReact/static/css/main.ba719981.chunk.css.map",
+    "static/js/2.1e84dc62.chunk.js.LICENSE.txt": "/catsProjectReact/static/js/2.1e84dc62.chunk.js.LICENSE.txt",
+    "static/media/0.png": "/catsProjectReact/static/media/0.47bf35aa.png",
+    "static/media/1.jpg": "/catsProjectReact/static/media/1.987f06cb.jpg",
+    "static/media/2.jpg": "/catsProjectReact/static/media/2.26dd9259.jpg",
+    "static/media/3.jpg": "/catsProjectReact/static/media/3.6b262e5c.jpg",
+    "static/media/4.jpg": "/catsProjectReact/static/media/4.9aa2d905.jpg",
+    "static/media/5.jpg": "/catsProjectReact/static/media/5.613fc6f3.jpg",
+    "static/media/Croix.svg": "/catsProjectReact/static/media/Croix.0b0f56a5.svg",
+    "static/media/Menuico.svg": "/catsProjectReact/static/media/Menuico.ecea2d0a.svg",
+    "static/media/Metroid.mp3": "/catsProjectReact/static/media/Metroid.dc154521.mp3",
+    "static/media/Payout.wav": "/catsProjectReact/static/media/Payout.f7814f7b.wav",
+    "static/media/boxdig.mp3": "/catsProjectReact/static/media/boxdig.51377e11.mp3",
+    "static/media/cat-154642.svg": "/catsProjectReact/static/media/cat-154642.41bc6580.svg",
+    "static/media/chien.mp3": "/catsProjectReact/static/media/chien.6ae85569.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6399bffb.js",
+    "static/js/2.1e84dc62.chunk.js",
+    "static/css/main.ba719981.chunk.css",
+    "static/js/main.9f896af9.chunk.js"
+  ]
+}
