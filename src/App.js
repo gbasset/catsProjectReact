@@ -7,7 +7,7 @@ import InfinityScrollContainer from './components/InfinityScroll/InfinityScrollC
 import Home from './components/Acc/Home'
 import Erreur from './components/Erreur/Erreur'
 
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { HashRouter as Router, Route, Switch } from 'react-router-dom'
 import SearchCatContainer from './components/SearchCat/SearchCatContainer';
 import CasinoCatsContainer from './components/CasinoCats/CasinoCatsContainer';
 import Context from './Context/Context'
