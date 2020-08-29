@@ -31,8 +31,10 @@ function InfinityScrollContainer() {
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+        setTimeout(() => {
+            return () => window.removeEventListener('scroll', handleScroll);
+        }, 1000);
+    });
     function handleScroll() {
         if (document.documentElement.offsetHeight >= window.innerHeight) {
             setIsFetching(true);
