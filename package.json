@@ -16,7 +16,7 @@
     "react-spinners-kit": "^1.9.1"
   },
   "scripts": {
-    "deploy": "npm run build&&gh-pages -d build",
+    "deploy": "CI= react-scripts build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
