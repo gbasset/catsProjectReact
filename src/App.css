@@ -25,7 +25,7 @@ h1 {
 .loader {
   opacity: 0;
   display: flex;
-  position: fixed;
+  position: relative;
   margin: auto;
   bottom: 50px;
   left: 50%;

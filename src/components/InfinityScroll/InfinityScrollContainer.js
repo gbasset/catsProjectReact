@@ -34,7 +34,8 @@ function InfinityScrollContainer() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     function handleScroll() {
-        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight) return;
+
+        if (window.innerHeight + document.documentElement.scrollTop > document.documentElement.offsetHeight - 350) return;
         setIsFetching(true);
         console.log('Fetch more list items!')
     }
@@ -66,7 +67,7 @@ function InfinityScrollContainer() {
         }, 2000);
     }
 
-    console.log(catsWithPic);
+    // console.log(catsWithPic);
     return (
         <div className="contain">
             {
