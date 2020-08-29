@@ -2,7 +2,7 @@
     width: 80%;
     height: 500px;
     background: url('./../../Asset/logoHome/undraw_logic_n6th.svg') no-repeat;
-    background-size: cover;
+    background-size: contain;
     margin: auto;
 }
 
