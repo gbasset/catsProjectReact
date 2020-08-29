@@ -34,10 +34,10 @@ function InfinityScrollContainer() {
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
     function handleScroll() {
-
-        if (window.innerHeight + document.documentElement.scrollTop > document.documentElement.offsetHeight - 350) return;
-        setIsFetching(true);
-        console.log('Fetch more list items!')
+        if (document.documentElement.offsetHeight >= window.innerHeight) {
+            setIsFetching(true);
+            console.log('Fetch more list items!')
+        }
     }
     useEffect(() => {
         if (!isFetching) return;
