@@ -36,7 +36,7 @@ function InfinityScrollContainer() {
         }, 1000);
     });
     function handleScroll() {
-        if (document.documentElement.offsetHeight >= window.innerHeight) {
+        if (document.documentElement.offsetHeight >= document.documentElement.scrollHeight - 50) {
             setIsFetching(true);
             console.log('Fetch more list items!')
         }
