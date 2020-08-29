@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a1e114d6a2a589f59a8f3781976723e4",
+    "revision": "7131f011ba5dacdf0b84976c21dc6c9b",
     "url": "/catsProjectReact/index.html"
   },
   {
-    "revision": "0431c5810b7a7882a5dd",
-    "url": "/catsProjectReact/static/css/main.ba719981.chunk.css"
+    "revision": "2f6f26d19aabdabc2f62",
+    "url": "/catsProjectReact/static/css/main.fd34f7e4.chunk.css"
   },
   {
     "revision": "9f93c6046be271032a91",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/catsProjectReact/static/js/2.ffb36188.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0431c5810b7a7882a5dd",
-    "url": "/catsProjectReact/static/js/main.8fce2883.chunk.js"
+    "revision": "2f6f26d19aabdabc2f62",
+    "url": "/catsProjectReact/static/js/main.17e60671.chunk.js"
   },
   {
     "revision": "9e057c79ff1fb7e763e5",
@@ -74,5 +74,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "6ae855697d43550d90de42abc206b574",
     "url": "/catsProjectReact/static/media/chien.6ae85569.mp3"
+  },
+  {
+    "revision": "edf8f55cc94cadbfe3b0ca936792ee79",
+    "url": "/catsProjectReact/static/media/undraw_logic_n6th.edf8f55c.svg"
   }
 ]);
