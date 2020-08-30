@@ -34,9 +34,9 @@ function InfinityScrollContainer() {
         setTimeout(() => {
             return () => window.removeEventListener('scroll', handleScroll);
         }, 1000);
-    });
+    }, []);
     function handleScroll() {
-        if (document.documentElement.offsetHeight >= document.documentElement.scrollHeight - 50) {
+        if (document.documentElement.offsetHeight >= document.documentElement.scrollHeight - 550) {
             setIsFetching(true);
             console.log('Fetch more list items!')
         }
